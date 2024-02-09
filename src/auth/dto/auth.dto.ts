@@ -1,4 +1,4 @@
 export class AuthPayloadDto {
-  username: string;
+  userName: string;
   password: string;
 }
