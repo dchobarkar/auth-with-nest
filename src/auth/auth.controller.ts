@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
 import { AuthPayloadDto } from './auth.dto';
 import { AuthService } from './auth.service';
 import { LocalGuard } from './guards/local.guard';
@@ -13,4 +13,7 @@ export class AuthController {
 
     return user;
   }
+
+  @Get('status')
+  status(@Req() req: Request) {}
 }
